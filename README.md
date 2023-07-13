@@ -1,1 +1,1 @@
-# Algoritma-VeriYapilari
+# Algoritma-VeriYapilari-BTKAkademi
