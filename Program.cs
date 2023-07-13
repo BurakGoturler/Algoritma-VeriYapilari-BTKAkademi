@@ -11,8 +11,8 @@ namespace Algoritma_VeriYapilari
 		static void Main(string[] args)
 		{
 			// SozDizimi();
-
-			Degiskenler();
+			// Degiskenler();
+			// KarakterDizeleri();
 		}
 
 		private static void SozDizimi()
@@ -97,6 +97,52 @@ namespace Algoritma_VeriYapilari
             Console.WriteLine(sayi1 + 2);
             Console.WriteLine(sayi1 * sayi1);
 			Console.WriteLine(sayi1 - 5);
+
+			Console.ReadKey();
+		}
+
+		private static void KarakterDizeleri()
+		{
+			// Bazı zamanlar kod içerisinde not düşmek isteyebiliriz.
+			// Dolayısıyla bu not kodu etkilememeli ve derleyici tarafından sanki bir kodmuşcasına anlaşılmamalıdır.
+
+			// Bu yüzden yorum satırladını kullanırız.
+			// C#'da yorum satırı için çift bölü işaretini kullanırız -> //
+			// Tek bir satırı değil bir kod bloğunu yoruma almak istiyorsak /* */ şeklinde bir kullanımı var.
+
+			/*
+			int x;
+			x = 2;
+			*/
+
+			// Refectoring kavramı zaman zaman yazdığımız kodları iyileştirmek, bazı kodları başka dosyalara taşımak veya mevcut kodu bir metoda çevirmek gibi işlemleri kapsayabilir.
+
+			// Escape ifadeleri, kaçış ifadelerine \n, \t, \q bakacağız.
+
+			// \n ifadesi yazıldığı yerden sonra bir alt satıra geçiyor.
+			string ifade1 = "\nBTK \nAkademi \nProgramlama \nÖğreniyorum.";
+
+			// Her bir kelime arasına tab kadar boşluk bırakıyor.
+			string ifade2 = "\tBTK \tAkademi \tProgramlama \tÖğreniyorum.";
+
+			// \a Uyarı sesi veriyor.
+			string ifade3 = "\aBTK Akademi Programlama Öğreniyorum.";
+
+			Console.WriteLine(ifade1);
+			Console.WriteLine(ifade2);
+			Console.WriteLine(ifade3);
+
+			// Bu dosya yolu gösterimi C# üzerinde çalışmaz.
+			// string YanlisDosyaYoluTanimi = "C:\user\burak";
+
+			// Bu tarz ifadeleri kullanmak için çift ters slash işareti ekliyoz.
+			string DogruDosyaYoluTanimi = "C:\\user\\burak";
+
+			// eğer yine de "C:\user\burak" şu şekilde göstermek istiyorsanız bu kullanım uygun olacaktır.
+			string DogruDosyaYoluTanimi2 = @"C:\user\burak";
+
+            Console.WriteLine(DogruDosyaYoluTanimi);
+            Console.WriteLine(DogruDosyaYoluTanimi2);
 
 			Console.ReadKey();
 		}
