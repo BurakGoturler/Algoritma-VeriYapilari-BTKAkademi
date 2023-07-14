@@ -13,6 +13,11 @@ namespace Algoritma_VeriYapilari
 			// SozDizimi();
 			// Degiskenler();
 			// KarakterDizeleri();
+			// DizeDegismezleriVeSabitTanimlama();
+			// Operatorler();
+			// Kosulİfadeleri();
+
+			Console.ReadKey();
 		}
 
 		private static void SozDizimi()
@@ -146,5 +151,127 @@ namespace Algoritma_VeriYapilari
 
 			Console.ReadKey();
 		}
+
+		private static void DizeDegismezleriVeSabitTanimlama()
+		{
+			// Örtülü Değişken
+			// var ifade = Console.ReadKey();
+			// Console.WriteLine(ifade.Key);
+			// Console.WriteLine(ifade.KeyChar);
+
+			var ifade = "Merhaba programlama dünyası.";
+
+            Console.WriteLine(ifade);                 // Merhaba programlama dünyası.
+			Console.WriteLine(ifade.Length);          // 27
+            Console.WriteLine(ifade.ToUpper());       // MERHABA PROGRAMLAMA DÜNYASI.
+			Console.WriteLine(ifade.ToLower());       // merhaba programlama dünyası.
+			Console.WriteLine(ifade.TrimStart());     // Merhaba programlama dünyası.
+			Console.WriteLine(ifade.TrimEnd());       // Merhaba programlama dünyası.
+			Console.WriteLine(ifade[0]);              // M
+			Console.WriteLine(ifade[1]);              // e
+			Console.WriteLine(ifade[ifade.Length-1]); // .
+
+			Console.ReadKey(true);
+		}
+
+		private static void Operatorler()
+		{
+			// Aritmetik Operatörler
+			// +, -, /, *, %
+
+			// İlişkisel Operatörler
+			// <, <=, >, >=, ==, !=
+
+			// Mantıksal Operatörler
+			// &&/ve -> tüm koşulların sağlanması gerekir.
+
+			// ||/veya bir koşulun sağlanması yeterli olacaktır.
+
+			// !/not/değil -> true false.
+
+			int A = 20, B = 10;
+
+            // Aritmetik Operatör örnekleri
+            Console.WriteLine(A + B);
+			Console.WriteLine(A - B);
+			Console.WriteLine(A * B);
+			Console.WriteLine(A / B);
+			Console.WriteLine(A % B);
+
+			Console.WriteLine("---");
+
+			// İlişkisel Operatör örnekleri
+			Console.WriteLine(A > B);
+            Console.WriteLine(A < B);
+			Console.WriteLine(A >= B);
+			Console.WriteLine(A <= B);
+			Console.WriteLine(A == B);
+			Console.WriteLine(A != B);
+
+            Console.WriteLine("---");
+
+            // Mantıksal Operatör örnekleri
+            Console.WriteLine(A > B && A > 5);
+            Console.WriteLine(A < B || B > 5);
+		}
+
+		private static void Kosulİfadeleri()
+		{
+            // if-else
+
+            // Tek Çift örneği
+
+            Console.WriteLine("Bir sayı giriniz: ");
+
+			int sayi = Convert.ToInt32(Console.ReadLine());
+
+			if (sayi % 2 == 0)
+			{
+                Console.WriteLine($"{sayi} çift bir sayıdır.");
+            }
+			else
+			{
+				Console.WriteLine($"{sayi} tek bir sayıdır.");
+			}
+
+            Console.WriteLine("----");
+
+            // Mutlak De ğer örneği
+
+            int n = Convert.ToInt32(Console.ReadLine());
+
+			if (n<0)
+			{
+                Console.WriteLine($"|{n}| = {n*-1}");
+            }
+			else
+			{
+                Console.WriteLine($"|{n}| = {n}");
+            }
+
+			Console.WriteLine("----");
+
+			var k = (char)Console.Read();
+
+			if (char.IsDigit(k)) // k değeri bir rakam mı ?
+			{
+                Console.WriteLine("Rakamdır.");
+            }
+			else if (char.IsLower(k)) // k değeri küçük bir ifade mi ?
+			{
+				Console.WriteLine("Küçük karakter.");
+			}
+			else if (char.IsUpper(k)) // k değeri büyük bir ifade mi ?
+			{
+				Console.WriteLine("Büyük karakter.");
+			}
+			else
+			{
+				Console.WriteLine("Bilinmeyen karakter.");
+			}
+
+			Console.WriteLine(k);
+
+        }
 	}
 }
