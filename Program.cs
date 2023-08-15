@@ -10,13 +10,7 @@ namespace Algoritma_VeriYapilari
 	{
 		static void Main(string[] args)
 		{
-			// SozDizimi();
-			// Degiskenler();
-			// KarakterDizeleri();
-			// DizeDegismezleriVeSabitTanimlama();
-			// Operatorler();
-			// Kosulİfadeleri();
-
+			Cevrimler3();
 			Console.ReadKey();
 		}
 
@@ -50,7 +44,7 @@ namespace Algoritma_VeriYapilari
 			Console.ReadKey();
 		}
 
-		private static void Degiskenler() 
+		private static void Degiskenler()
 		{
 			// Bir değişken tanımı yaparken -Tip (Type) konusunda dikkatli olmalıyız.
 			// Değişken tipleri kısıtlayıcı unsurlar içerir. Değişken tipi bu noktada belirleyici etkiye sahiptir.
@@ -87,10 +81,10 @@ namespace Algoritma_VeriYapilari
 
 			string isim = "Burak";
 
-            // İsim ifadesi bir ya da daha fazla yerde kullanılabilir.
-            // Program içerisinde herhangi bir yerde değeri değişebilir.
+			// İsim ifadesi bir ya da daha fazla yerde kullanılabilir.
+			// Program içerisinde herhangi bir yerde değeri değişebilir.
 
-            Console.WriteLine("Merhaba " + isim + ".");
+			Console.WriteLine("Merhaba " + isim + ".");
 
 			isim = "Mehmet";
 
@@ -98,9 +92,9 @@ namespace Algoritma_VeriYapilari
 
 			// Basit Değişken Örneği
 			int sayi1 = 2;
-            Console.WriteLine(sayi1);
-            Console.WriteLine(sayi1 + 2);
-            Console.WriteLine(sayi1 * sayi1);
+			Console.WriteLine(sayi1);
+			Console.WriteLine(sayi1 + 2);
+			Console.WriteLine(sayi1 * sayi1);
 			Console.WriteLine(sayi1 - 5);
 
 			Console.ReadKey();
@@ -146,8 +140,8 @@ namespace Algoritma_VeriYapilari
 			// eğer yine de "C:\user\burak" şu şekilde göstermek istiyorsanız bu kullanım uygun olacaktır.
 			string DogruDosyaYoluTanimi2 = @"C:\user\burak";
 
-            Console.WriteLine(DogruDosyaYoluTanimi);
-            Console.WriteLine(DogruDosyaYoluTanimi2);
+			Console.WriteLine(DogruDosyaYoluTanimi);
+			Console.WriteLine(DogruDosyaYoluTanimi2);
 
 			Console.ReadKey();
 		}
@@ -161,15 +155,15 @@ namespace Algoritma_VeriYapilari
 
 			var ifade = "Merhaba programlama dünyası.";
 
-            Console.WriteLine(ifade);                 // Merhaba programlama dünyası.
+			Console.WriteLine(ifade);                 // Merhaba programlama dünyası.
 			Console.WriteLine(ifade.Length);          // 27
-            Console.WriteLine(ifade.ToUpper());       // MERHABA PROGRAMLAMA DÜNYASI.
+			Console.WriteLine(ifade.ToUpper());       // MERHABA PROGRAMLAMA DÜNYASI.
 			Console.WriteLine(ifade.ToLower());       // merhaba programlama dünyası.
 			Console.WriteLine(ifade.TrimStart());     // Merhaba programlama dünyası.
 			Console.WriteLine(ifade.TrimEnd());       // Merhaba programlama dünyası.
 			Console.WriteLine(ifade[0]);              // M
 			Console.WriteLine(ifade[1]);              // e
-			Console.WriteLine(ifade[ifade.Length-1]); // .
+			Console.WriteLine(ifade[ifade.Length - 1]); // .
 
 			Console.ReadKey(true);
 		}
@@ -191,8 +185,8 @@ namespace Algoritma_VeriYapilari
 
 			int A = 20, B = 10;
 
-            // Aritmetik Operatör örnekleri
-            Console.WriteLine(A + B);
+			// Aritmetik Operatör örnekleri
+			Console.WriteLine(A + B);
 			Console.WriteLine(A - B);
 			Console.WriteLine(A * B);
 			Console.WriteLine(A / B);
@@ -202,52 +196,52 @@ namespace Algoritma_VeriYapilari
 
 			// İlişkisel Operatör örnekleri
 			Console.WriteLine(A > B);
-            Console.WriteLine(A < B);
+			Console.WriteLine(A < B);
 			Console.WriteLine(A >= B);
 			Console.WriteLine(A <= B);
 			Console.WriteLine(A == B);
 			Console.WriteLine(A != B);
 
-            Console.WriteLine("---");
+			Console.WriteLine("---");
 
-            // Mantıksal Operatör örnekleri
-            Console.WriteLine(A > B && A > 5);
-            Console.WriteLine(A < B || B > 5);
+			// Mantıksal Operatör örnekleri
+			Console.WriteLine(A > B && A > 5);
+			Console.WriteLine(A < B || B > 5);
 		}
 
 		private static void Kosulİfadeleri()
 		{
-            // if-else
+			// if-else
 
-            // Tek Çift örneği
+			// Tek Çift örneği
 
-            Console.WriteLine("Bir sayı giriniz: ");
+			Console.WriteLine("Bir sayı giriniz: ");
 
 			int sayi = Convert.ToInt32(Console.ReadLine());
 
 			if (sayi % 2 == 0)
 			{
-                Console.WriteLine($"{sayi} çift bir sayıdır.");
-            }
+				Console.WriteLine($"{sayi} çift bir sayıdır.");
+			}
 			else
 			{
 				Console.WriteLine($"{sayi} tek bir sayıdır.");
 			}
 
-            Console.WriteLine("----");
+			Console.WriteLine("----");
 
-            // Mutlak De ğer örneği
+			// Mutlak De ğer örneği
 
-            int n = Convert.ToInt32(Console.ReadLine());
+			int n = Convert.ToInt32(Console.ReadLine());
 
-			if (n<0)
+			if (n < 0)
 			{
-                Console.WriteLine($"|{n}| = {n*-1}");
-            }
+				Console.WriteLine($"|{n}| = {n * -1}");
+			}
 			else
 			{
-                Console.WriteLine($"|{n}| = {n}");
-            }
+				Console.WriteLine($"|{n}| = {n}");
+			}
 
 			Console.WriteLine("----");
 
@@ -255,8 +249,8 @@ namespace Algoritma_VeriYapilari
 
 			if (char.IsDigit(k)) // k değeri bir rakam mı ?
 			{
-                Console.WriteLine("Rakamdır.");
-            }
+				Console.WriteLine("Rakamdır.");
+			}
 			else if (char.IsLower(k)) // k değeri küçük bir ifade mi ?
 			{
 				Console.WriteLine("Küçük karakter.");
@@ -272,6 +266,110 @@ namespace Algoritma_VeriYapilari
 
 			Console.WriteLine(k);
 
-        }
+		}
+
+		public static void Cevrimler()
+		{
+			// Döngüler
+			// Farklı döngü türleri vardır.
+			// For, While, Do-While ve Foreach döngüleri mevcuttur.
+
+			// While ifadesi
+			// İken anlamına geliyor.
+
+			// Bu şekilde sonsuz döngü üretmiş oluruz.
+			int i = 10;
+
+			while (i < 10) // i küçük 10 iken
+			{
+                Console.WriteLine("1. Döngü bloğu.");
+            }
+
+			// Bu şekilde de sonsuz döngü üretmiş oluruz. Ancak burada sonsuz döngüyü sayaç sayesinde gözlemleyebiliyoruz.
+			int k = 10;
+			int sayac1 = 0;
+
+			while (k < 10) // k küçük 10 iken 
+			{
+				Console.WriteLine("2.Döngü bloğu.");
+				sayac1++; // döngüye girdiği an 1 olarak başlasın
+                Console.WriteLine(sayac1); // bu döngü her gerçekleştiğinde sayaç değerini görelim.
+			}
+
+			// Döngü içerisinde kontrol ettiğimiz ifadeyi güncellemediğimiz için sonsuz bir döngü yapısı ile karşılaşıyoruz.
+
+			// Bu örnekde güncelleme işlemini yapıyoruz.
+			int j = 10;
+			int sayac2 = 0;
+
+			while (j < 10) // j küçük 10 iken 
+			{
+				Console.WriteLine("3.Döngü bloğu.");
+				sayac2++; // döngüye girdiği an 1 olarak başlasın
+				Console.WriteLine(sayac2); // bu döngü her gerçekleştiğinde sayaç değerini görelim.
+				j++;
+                Console.WriteLine(j);
+			}
+		}
+
+		public static void Cevrimler2()
+		{
+			// 1'den 10'a kadar olan sayıları yazdırdı.
+			int sayac = 1;
+            while (sayac <= 10)
+            {
+                //Console.Write(" " + sayac + " ");
+				Console.WriteLine("{0,-3} {1,-3}", sayac,sayac*sayac);
+				sayac++;
+            }
+			Console.ReadKey();
+
+			// üstteki kod parçacığının tam tersini yazdırdık.
+			// 10'dan 0'a kadar olan sayıları yazdırdı.
+			int sayacc = 10;
+			while (sayacc >= 0)
+			{
+				//Console.Write(" " + sayac + " ");
+				Console.WriteLine("{0,-3} {1,-3}", sayacc, sayacc * sayacc);
+				sayacc--;
+			}
+			Console.ReadKey();
+
+            // do while örnek
+
+            Console.Write("Bir sayı giriniz:");
+            // klavyeden bir n değeri okıyalım. n değerine kadar olan çift sayıları yazdıralım
+            // klavyeden değer okumak için convert metodu ile ToInt32 şeklinde bir tanımlama yapıyoruz.
+            // böylelikle n değerine gelen değeri tam sayı olarak almış oluyorum.
+            // (Console.ReadLine() ile de o satırı okuyoruz.
+            // Console.ReadLine() string.
+            // Convert.ToInt32(Console.ReadLine()) tamsayı.
+            int n = Convert.ToInt32(Console.ReadLine());
+
+			int i = 2;
+
+			// herhangi bir koşula bakmaksızın kod bloğu içerisindeki kodları olduğu gibi çalıştırır.
+			// koşula kod bloğu içerisindeki yaptıktan sonra bakıyor.
+			do
+			{
+                Console.WriteLine(i);
+                i = i + 2;
+			} while (i <= n);
+			Console.ReadKey();
+		}
+
+		public static void Cevrimler3()
+		{
+			for (int i = 0; i < 100; i+=5)
+			{
+                Console.WriteLine(i);
+            }
+
+			// forr
+			for (int j = 100; j >= 0; j-=5)
+			{
+                Console.WriteLine(j);
+            }
+		}
 	}
 }
