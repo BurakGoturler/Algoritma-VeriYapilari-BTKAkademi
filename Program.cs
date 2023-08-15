@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace Algoritma_VeriYapilari
 	{
 		static void Main(string[] args)
 		{
-			Cevrimler3();
+			Diziler();
 			Console.ReadKey();
 		}
 
@@ -369,7 +370,77 @@ namespace Algoritma_VeriYapilari
 			for (int j = 100; j >= 0; j-=5)
 			{
                 Console.WriteLine(j);
-            }
+			}
+		}
+
+		public static void Diziler()
+		{
+			// array kavramı
+			// diziler büyük ya da küçük pek çok programda yaygın şekilde kullanılan temel programlama bileşenidir.
+			// temel veri yapısıdır.
+			// diziler sabit boyutludur. Diziler tanımlandığı anda uzunluk bilgisini bilmelidir.
+			// sıfır tabanlı indisleme. 0'dan başlar ilk elemean,veri,nesne.
+			// diziler tek boyutlu olduğu gibi çift boyutlu da olabilirler.
+
+			Console.WriteLine("1. örnek");
+
+			// dizi tanımı
+			int[] numaralar;
+
+			// başlatma
+			numaralar = new int[3];
+
+			numaralar[0] = 3;
+			numaralar[1] = 5;
+			numaralar[2] = 7;
+
+			for (int i = 0; i < numaralar.Length; i++)
+			{
+				Console.WriteLine(numaralar[i]);
+			}
+
+			Console.ReadKey();
+
+			Console.WriteLine("2. örnek");
+
+			// dizi tanımını ve başlatmayı aynı yerde yapabiliriz.
+			int[] numaralarr = new int[3];
+
+			numaralarr[0] = 3;
+			numaralarr[1] = 5;
+			numaralarr[2] = 7;
+
+			for (int j = 0; j < numaralarr.Length; j++)
+			{
+				Console.WriteLine(numaralarr[j]);
+			}
+			Console.ReadKey();
+
+			Console.WriteLine("3. örnek");
+
+			// dizi tanımını ve başlatmayı ve atamayı aynı yerde yapabiliriz.
+			// int[] numaralarrr = new int[3] { 3, 5, 7};
+			// int[] numaralarrr = new int[] { 3, 5, 7, 8, 6};
+			int[] numaralarrr = { 3, 5, 7, 8, 10};
+
+
+			for (int k = 0; k < numaralarrr.Length; k++)
+			{
+				Console.WriteLine(numaralarrr[k]);
+			}
+
+			Console.ReadKey();
+
+			Console.WriteLine("indis örneği");
+			int[] numaralarrrr = { 3, 5, 7, 8, 10 };
+
+			for (int k = 0; k < numaralarrrr.Length; k++)
+			{
+				Console.WriteLine($"Numaralar[{k}] = " +
+					$"{numaralarrrr[k]}");
+			}
+
+			Console.ReadKey();
 		}
 	}
 }
