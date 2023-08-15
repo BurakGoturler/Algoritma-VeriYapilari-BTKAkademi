@@ -11,7 +11,7 @@ namespace Algoritma_VeriYapilari
 	{
 		static void Main(string[] args)
 		{
-			Diziler();
+			VeriTurleriAltUstLimit();
 			Console.ReadKey();
 		}
 
@@ -432,6 +432,7 @@ namespace Algoritma_VeriYapilari
 			Console.ReadKey();
 
 			Console.WriteLine("indis örneği");
+
 			int[] numaralarrrr = { 3, 5, 7, 8, 10 };
 
 			for (int k = 0; k < numaralarrrr.Length; k++)
@@ -441,6 +442,91 @@ namespace Algoritma_VeriYapilari
 			}
 
 			Console.ReadKey();
+
+			Console.WriteLine("4. örnek");
+
+			// Boyut bilgisini dışarıdan alan, rakamların rastgele oluşacağı bir örnek.
+
+			Console.WriteLine("Dizi boyutunu giriniz: ");
+
+			int boyut = Convert.ToInt32(Console.ReadLine());
+
+			int[] sayilar = new int[boyut];
+
+			var r = new Random();
+
+			for (int i = 0; i < sayilar.Length; i++)
+			{
+				// dizi içerisinde en az 1 en fazla 10 sayısını üretsin.
+				sayilar[i] = r.Next(1, 10);
+			}
+
+			foreach (int sayi in sayilar)
+			{
+				Console.WriteLine($"{sayi,5} {sayi * sayi,5}");
+			}
+
+			Console.ReadKey();
+		}
+
+		public static void CokBoyutluDiziler()
+		{
+			Console.ReadKey();
+        }
+
+		public static void VeriTurleriAltUstLimit()
+		{
+			// Signed 8-bit integer
+			Console.WriteLine(nameof(SByte));
+            Console.WriteLine($"Alt Limit		: {SByte.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {SByte.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(SByte),20}");
+			Console.ReadKey();
+
+			// Unsigned 8-bit integer
+			Console.WriteLine(nameof(Byte));
+			Console.WriteLine($"Alt Limit		: {Byte.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {Byte.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(Byte),20}");
+			Console.ReadKey();
+
+			// Signed 16-bit integer
+			Console.WriteLine(nameof(Int16));
+			Console.WriteLine($"Alt Limit		: {Int16.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {Int16.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(Int16),20}");
+			Console.ReadKey();
+
+			// Unsigned 16-bit integer
+			Console.WriteLine(nameof(UInt16));
+			Console.WriteLine($"Alt Limit		: {UInt16.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {UInt16.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(UInt16),20}");
+			Console.ReadKey();
+
+			// Signed 32-bit integer
+			Console.WriteLine(nameof(Int32));
+			Console.WriteLine($"Alt Limit		: {Int32.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {Int32.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(Int32),20}");
+			Console.ReadKey();
+
+			// Unsigned 32-bit integer
+			Console.WriteLine(nameof(UInt32));
+			Console.WriteLine($"Alt Limit		: {UInt32.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {UInt32.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(UInt32),20}");
+			Console.ReadKey();
+
+			// Signed double
+			Console.WriteLine(nameof(Double));
+			Console.WriteLine($"Alt Limit		: {Double.MinValue,20}");
+			Console.WriteLine($"Üst Limit		: {Double.MaxValue,20}");
+			Console.WriteLine($"Boyut			: {sizeof(Double),20}");
+			Console.ReadKey();
+
+			Console.ReadKey();
+
 		}
 	}
 }
